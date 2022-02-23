@@ -7,11 +7,11 @@ import TodoListDetails from '../components/TodoList/TodoListDetails';
 export const history = createHistory();
 
 const AppRouter = () => (
-	<Router history={history}>
+	<Router basename={"/"} history={history}>
 		<Switch>
 			<Route exact path="/" component={App} />
 			<Route path="/edit/:id" component={TodoListDetails} />
-			<Redirect path="*" to="/"/>
+			{/* <Redirect path="*" to="/"/> */}
 		</Switch>
 	</Router>
 );
